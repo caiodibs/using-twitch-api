@@ -1,0 +1,28 @@
+<div class="container">
+	<!-- Header section -->
+	<header>
+		<h1 class="text-center pt-4">Twitch streamers</h1>
+	</header>
+	<!-- Main section-->
+	<main ng-app="appStreaming">
+		<div class="m-md-5 m-sm-3 m-3" ng-controller="ctrlStreaming">
+			<div class="row p-4 mt-2 {{stream.classStream}}" ng-repeat="stream in results | orderBy: ['-classStream', 'streamChannel']">
+				<div class="col-3 col-sm-3 col-md-1">
+					<img src="{{stream.streamLogo}}" alt="{{stream.streamChannel}}" title="{{stream.streamChannel}}" width="40" height="40" aria-hidden="true">
+				</div>
+				<div class="col-9 col-sm-9 col-md-3">
+					<a href="{{stream.url}}" target="_blank">
+						{{stream.streamChannel}}
+					</a>
+				</div>
+				<div class="col-12 col-sm-12 col-md-8">
+					{{stream.channelDescription}}
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- Footer section-->
+	<footer>
+		<div class="text-center">&copy;2017 Caio Soares</div>
+	</footer>
+</div>

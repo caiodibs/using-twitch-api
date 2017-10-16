@@ -1,0 +1,43 @@
+// Variables
+// Colors
+$text-color: #FFFFFF;
+$footer-bg-color: #65698E;
+$main-bg-color: #202020;
+$bg-color: #252525;
+$on-bg-color: #55a500;
+$off-bg-color: #AD0505;
+
+// Global tags
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: $bg-color;
+	color: $text-color;
+	padding-top: 50px;
+}
+a {
+	color: $text-color !important;
+}
+footer {
+	background-color: $footer-bg-color;
+	height: 50px;
+	margin: 10px -15px 0px -15px;
+	& div {
+		line-height: 50px;
+		vertical-align: middle;
+		color: $text-color;
+	}
+}
+
+// Classes & Ids
+.container {
+	background-color: $main-bg-color;
+}
+.row {
+	background-color: #455A64;
+}
+.stream-on {
+	border: .3px solid $on-bg-color;
+}
+.stream-off {
+	border: .3px solid $off-bg-color;
+}
